@@ -124,8 +124,11 @@ public class Campo<T extends Comparable> {
         while (aux != null) {
             tablas[i] = (T) aux.getDato();
             aux = aux.getSiguiente();
+            System.out.println(tablas[i]);
             i++;
+            
         }
+        System.out.println("");
         return tablas;
     }
 

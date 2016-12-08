@@ -33,7 +33,7 @@ public class Ordenamiento<T extends Comparable> {
         int i, k;
         @SuppressWarnings("LocalVariableHidesMemberVariable")
         T aux = null;
-
+        
         for (i = 1; i < arreglo.length; i++) {
             aux = arreglo[i];
             k = i - 1;
@@ -50,6 +50,7 @@ public class Ordenamiento<T extends Comparable> {
                 return aux;
             }
         }
+         System.out.println(aux);
         return aux;
     }
 
@@ -57,7 +58,7 @@ public class Ordenamiento<T extends Comparable> {
      * METODO DE LA BURBUJA, SIRVE PARA ORDENAR DE FORMA ASCENDENTE
      */
     public T[] burbuja(T[] arreglo) {
-        T aux;
+        T aux = null;
 
         for (int i = 0; i < arreglo.length; i++) {
             for (int j = i + 1; j < arreglo.length; j++) {
@@ -68,6 +69,7 @@ public class Ordenamiento<T extends Comparable> {
                 }
             }
         }
+        System.out.println(aux);
         return arreglo;
     }
 
@@ -84,8 +86,10 @@ public class Ordenamiento<T extends Comparable> {
                     T aux = arreglo[i];
                     arreglo[i] = arreglo[j];
                     arreglo[j] = aux;
+                    System.out.println(aux);
                     bandera = false;
                 }
+               
             }
             i++;
         }
@@ -112,6 +116,7 @@ public class Ordenamiento<T extends Comparable> {
                 arreglo[j + 1] = arreglo[j];
             }
             arreglo[primero] = aux;
+            System.out.println(aux);
         }
     }
 
@@ -122,7 +127,7 @@ public class Ordenamiento<T extends Comparable> {
         T pivote = arreglo[izq];
         int i = izq;
         int j = der;
-        T aux;
+        T aux = null;
         while (i < j) {
             while (arreglo[i].compareTo(pivote) <= 0 && i < j) {
                 i++;
@@ -135,6 +140,7 @@ public class Ordenamiento<T extends Comparable> {
                 arreglo[i] = arreglo[j];
                 arreglo[j] = aux;
             }
+            System.out.println(aux);
         }
         arreglo[izq] = arreglo[j];
         arreglo[j] = pivote;
@@ -144,7 +150,7 @@ public class Ordenamiento<T extends Comparable> {
         if (j + 1 < der) {
             quickSort(arreglo, j + 1, der);
         }
-
+        
     }
 
     /**
@@ -164,6 +170,7 @@ public class Ordenamiento<T extends Comparable> {
             }
             arreglo[k] = arreglo[i];
             arreglo[i] = menor;
+             System.out.println(menor);
         }
     }
 
@@ -173,7 +180,7 @@ public class Ordenamiento<T extends Comparable> {
     public void shakeSort(T[] arreglo) {
         int intercambios = 0, comparaciones = 0;
         int i, izq, der, k;
-        T aux;
+        T aux = null;
         izq = 1;
         der = arreglo.length - 1;
         k = arreglo.length - 1;
@@ -200,7 +207,7 @@ public class Ordenamiento<T extends Comparable> {
                 }
             }
             der = k - 1;
-
+ System.out.println(aux);
         }
     }
 
@@ -209,7 +216,7 @@ public class Ordenamiento<T extends Comparable> {
      */
     public void shellSort(T arreglo[]) {
         int salto, i;
-        T aux;
+        T aux = null;
         boolean cambios;
         for (salto = arreglo.length / 2; salto != 0; salto /= 2) {
             cambios = true;
@@ -226,6 +233,7 @@ public class Ordenamiento<T extends Comparable> {
                     }
                 }
             }
+            System.out.println(aux);
         }
     }
 

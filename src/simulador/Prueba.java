@@ -88,36 +88,50 @@ public class Prueba<T> {
                                         + "\n2.-Burbuja con Señal"
                                         + "\n3.-Shaker Sort\n4.-Insercion Directa\n5.-Insercion Binaria\n6.-Seleccion Directa\n7.-Shell Sort"
                                         + "\n8.-Quick Sort"));
+                                 System.out.println("datos de la tabla" + c.recorrer2() + "\n");
                                 switch (opcion3) {
                                     case 1:
-
+                                       // System.out.println("datos de la tabla" + c.recorrer2() + "\n");
                                         System.out.println("Burbuja:\n" + o.burbuja(c.recorrer2()));
 
                                         break;
                                     case 2:
-
+                                        System.out.println("burbuja con senial\n");
+                                       // System.out.println("datos de la tabla" + c.recorrer2() + "\n");
                                         o.burbujaSeñal(c.recorrer2());
                                         break;
                                     case 3:
-
+                                        System.out.println("shaker\n");
+                                       // System.out.println("datos de la tabla" + c.recorrer2() + "\n");
                                         o.shakeSort(c.recorrer2());
 
                                         break;
                                     case 4:
-                                        System.out.println("Baraja\n" + o.baraja(c.recorrer2()));
+                                       // System.out.println("datos de la tabla" + c.recorrer2() + "\n");
+                                        //System.out.println("Baraja");
+                                        System.out.println("Baraja" + o.baraja(c.recorrer2()));
                                         o.baraja(c.recorrer2());
 
                                         break;
                                     case 5:
+                                       // System.out.println("datos de la tabla" + c.recorrer2() + "\n");
+                                        System.out.println("Insercion Binaria\n");
                                         o.insercionBinaria(c.recorrer2());
                                         break;
                                     case 6:
-                                        o.seleccionDirecta(c.obtenerArreglo());
+                                      //  System.out.println("datos de la tabla" + c.recorrer2() + "\n");
+                                        //for(int x=0;x<c.recorrer2().length;x++){
+                                   o.seleccionDirecta(c.recorrer2());
+                                        //}
                                         break;
                                     case 7:
-                                        o.shellSort(c.obtenerArreglo());
+                                        System.out.println("shell:\n");
+                                       // System.out.println("datos de la tabla" + c.recorrer2() + "\n");
+                                        o.shellSort(c.recorrer2());
                                         break;
                                     case 8:
+                                        System.out.println("Quicksort\n");
+                                       // System.out.println("datos de la tabla" + c.recorrer2() + "\n");
                                         o.quickSort(c.recorrer2(), 0, c.recorrer2().length);
                                         break;
 
@@ -136,6 +150,10 @@ public class Prueba<T> {
             }
         } while (opcion != 5);
 
+    }
+   
+
+   public static void Imprimir() {
     }
 
     public static void main(String[] args) {
